@@ -1,0 +1,16 @@
+{
+  "name": "pemilos-2025",
+  "version": "1.0.0",
+  "description": "Website Pemilihan OSIM MTSN 3 Tulungagung 2025",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "echo 'Static site - no dev server needed'"
+  },
+  "keywords": ["pemilos", "osim", "mtsn", "tulungagung"],
+  "author": "Panitia Pemilos 2025",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
