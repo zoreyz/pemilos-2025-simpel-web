@@ -1,0 +1,61 @@
+:root {
+    --navy: #003366;
+    --dark-blue: #0A2647;
+    --light-gray: #E0E0E0;
+    --gold: #FFB74D;
+    --dark-gold: #CF9E6F;
+    --white: #FFFFFF;
+    --very-light-gray: #F8F9FA;
+    --black: #212529;
+    --dark-gray: #495057;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--black);
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bitter', serif;
+    color: var(--navy);
+}
+
+.high-contrast {
+    color: var(--navy);
+}
+
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%);
+}
+
+.batik-bg {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23003366" opacity="0.05" d="M50,0 C77.614,0 100,22.386 100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 Z M50,20 C63.254,20 74,30.746 74,44 C74,57.254 63.254,68 50,68 C36.746,68 26,57.254 26,44 C26,30.746 36.746,20 50,20 Z"/></svg>');
+    background-size: 200px;
+}
+
+.accent-gradient {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--dark-gold) 100%);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.smooth-transition {
+    transition: all 0.3s ease;
+}
