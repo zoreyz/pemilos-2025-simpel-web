@@ -1,0 +1,226 @@
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md z-50 transform translate-y-full transition-transform duration-500">
+    <div class="glassmorphism rounded-2xl p-6 shadow-2xl border border-white/20">
+        <!-- Header -->
+        <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-100 p-2 rounded-full">
+                    <i class='bx bx-cookie text-blue-600 text-xl'></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-blue-800 text-lg">Privasi & Cookie</h3>
+                    <p class="text-sm text-gray-600">Pengalaman yang lebih baik untuk Anda</p>
+                </div>
+            </div>
+            <button id="cookieClose" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <i class='bx bx-x text-xl'></i>
+            </button>
+        </div>
+
+        <!-- Message -->
+        <div class="mb-4">
+            <p class="text-gray-700 text-sm leading-relaxed">
+                Kami menggunakan cookie untuk meningkatkan pengalaman Anda di website Pemilos 2025. 
+                Beberapa cookie diperlukan untuk fungsi dasar, sementara yang lain membantu kami 
+                memahami bagaimana Anda menggunakan website ini.
+            </p>
+        </div>
+
+        <!-- Cookie Types -->
+        <div class="space-y-3 mb-4">
+            <!-- Necessary Cookies -->
+            <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-200">
+                <div class="flex items-center space-x-3">
+                    <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    <div>
+                        <span class="font-medium text-blue-800 text-sm">Cookie Penting</span>
+                        <p class="text-xs text-blue-600">Selalu aktif - untuk fungsi website</p>
+                    </div>
+                </div>
+                <div class="bg-blue-500 text-white px-2 py-1 rounded text-xs font-medium">
+                    Wajib
+                </div>
+            </div>
+
+            <!-- Analytics Cookies -->
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200">
+                <div class="flex items-center space-x-3">
+                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div>
+                        <span class="font-medium text-gray-800 text-sm">Cookie Analitik</span>
+                        <p class="text-xs text-gray-600">Memahami penggunaan website</p>
+                    </div>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="analyticsCookies" class="sr-only peer">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
+                </label>
+            </div>
+
+            <!-- Preference Cookies -->
+            <div class="flex items-center justify-between p-3 bg-purple-50 rounded-lg border border-purple-200">
+                <div class="flex items-center space-x-3">
+                    <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                    <div>
+                        <span class="font-medium text-purple-800 text-sm">Cookie Preferensi</span>
+                        <p class="text-xs text-purple-600">Mengingat pilihan Anda</p>
+                    </div>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="preferenceCookies" class="sr-only peer">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-500"></div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3">
+            <button id="acceptAll" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95">
+                <i class='bx bx-check-circle mr-2'></i>
+                Terima Semua
+            </button>
+            <button id="acceptNecessary" class="flex-1 bg-white hover:bg-gray-50 text-blue-600 border border-blue-600 py-3 px-4 rounded-lg font-medium transition-all duration-300">
+                Hanya yang Penting
+            </button>
+        </div>
+
+        <!-- Privacy Policy Link -->
+        <div class="mt-4 text-center">
+            <a href="#privacy" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+                <i class='bx bx-shield-alt mr-1'></i>
+                Kebijakan Privasi
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Settings Modal -->
+<div id="cookieSettings" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="glassmorphism rounded-2xl p-6 max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="text-xl font-bold text-blue-800">Pengaturan Cookie</h3>
+            <button id="closeSettings" class="text-gray-500 hover:text-gray-700">
+                <i class='bx bx-x text-2xl'></i>
+            </button>
+        </div>
+
+        <div class="space-y-6">
+            <!-- Necessary Cookies -->
+            <div class="bg-blue-50 rounded-xl p-4 border border-blue-200">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-4 h-4 bg-blue-500 rounded-full"></div>
+                        <span class="font-bold text-blue-800">Cookie Penting</span>
+                    </div>
+                    <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs font-medium">Selalu Aktif</span>
+                </div>
+                <p class="text-sm text-blue-700">
+                    Cookie yang diperlukan untuk fungsi dasar website seperti navigasi, keamanan, dan akses ke area terproteksi.
+                </p>
+            </div>
+
+            <!-- Analytics Cookies -->
+            <div class="bg-white rounded-xl p-4 border border-gray-200">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-4 h-4 bg-green-500 rounded-full"></div>
+                        <span class="font-bold text-gray-800">Cookie Analitik</span>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="analyticsSettings" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
+                    </label>
+                </div>
+                <p class="text-sm text-gray-600 mb-3">
+                    Membantu kami memahami bagaimana pengunjung berinteraksi dengan website, seperti halaman yang paling sering dikunjungi.
+                </p>
+                <div class="bg-green-50 rounded-lg p-3">
+                    <p class="text-xs text-green-700 font-medium">
+                        <i class='bx bx-info-circle mr-1'></i>
+                        Data yang dikumpulkan anonim dan tidak melacak identitas pribadi.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Preference Cookies -->
+            <div class="bg-white rounded-xl p-4 border border-gray-200">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-4 h-4 bg-purple-500 rounded-full"></div>
+                        <span class="font-bold text-gray-800">Cookie Preferensi</span>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="preferenceSettings" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-500"></div>
+                    </label>
+                </div>
+                <p class="text-sm text-gray-600">
+                    Mengingat pilihan dan pengaturan Anda (seperti preferensi cookie) untuk kunjungan berikutnya.
+                </p>
+            </div>
+        </div>
+
+        <!-- Save Settings Button -->
+        <div class="mt-6 flex space-x-3">
+            <button id="saveSettings" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors">
+                Simpan Pengaturan
+            </button>
+            <button id="resetSettings" class="px-4 py-3 text-gray-600 hover:text-gray-800 font-medium">
+                Reset
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Privacy Policy Section (Tambahkan di bagian bawah sebelum footer) -->
+<section id="privacy" class="py-12 bg-gray-50 hidden">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <div class="glassmorphism rounded-2xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-8 text-blue-800">Kebijakan Privasi & Cookie</h2>
+            
+            <div class="space-y-6 text-gray-700">
+                <div>
+                    <h3 class="font-bold text-lg text-blue-700 mb-3">1. Informasi Umum</h3>
+                    <p>Website Pemilos 2025 OSIM MTSN 3 Tulungagung menghormati privasi pengunjung. Kebijakan ini menjelaskan bagaimana kami mengumpulkan dan menggunakan informasi.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg text-blue-700 mb-3">2. Jenis Cookie yang Digunakan</h3>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li><strong>Cookie Penting:</strong> Diperlukan untuk fungsi dasar website</li>
+                        <li><strong>Cookie Analitik:</strong> Membantu kami memahami penggunaan website</li>
+                        <li><strong>Cookie Preferensi:</strong> Mengingat pilihan dan pengaturan Anda</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg text-blue-700 mb-3">3. Data yang Dikumpulkan</h3>
+                    <p>Kami hanya mengumpulkan data anonim untuk:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li>Statistik kunjungan</li>
+                        <li>Halaman yang paling sering diakses</li>
+                        <li>Preferensi tampilan (jika diizinkan)</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg text-blue-700 mb-3">4. Hak Anda</h3>
+                    <p>Anda memiliki hak untuk:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li>Mengubah preferensi cookie kapan saja</li>
+                        <li>Menolak cookie non-esensial</li>
+                        <li>Menghapus cookie dari browser</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <p class="text-blue-700 font-medium">
+                        <i class='bx bx-info-circle mr-2'></i>
+                        Untuk pertanyaan tentang kebijakan privasi, hubungi: 
+                        <a href="mailto:halossnega@gmail.com" class="underline">halossnega@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
