@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pemilos.ossnega.web.id/sitemap.xml
