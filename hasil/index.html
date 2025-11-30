@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pemilihan OSIM 2025 - MTSN 3 Tulungagung</title>
+    
+    <!-- CDN Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy: #003366;
+            --dark-blue: #0A2647;
+            --light-gray: #E0E0E0;
+            --gold: #FFB74D;
+            --dark-gold: #CF9E6F;
+            --white: #FFFFFF;
+            --very-light-gray: #F8F9FA;
+            --black: #212529;
+            --dark-gray: #495057;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bitter', serif;
+            color: var(--navy);
+        }
+        
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 51, 102, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 51, 102, 0.4);
+        }
+        
+        /* Progress Bar Animation */
+        .progress-bar {
+            transition: width 2s ease-in-out;
+        }
+        
+        /* Chart Animations */
+        .chart-bar {
+            transform-origin: bottom;
+            animation: growBar 1.5s ease-out;
+        }
+        
+        @keyframes growBar {
+            from { transform: scaleY(0); }
+            to { transform: scaleY(1); }
+        }
+        
+        /* Floating Animation */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Tooltip Styles */
+        .tooltip {
+            position: relative;
+        }
+        
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: nowrap;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Alert Banner -->
+    <div class="gradient-bg text-white py-3 px-4 text-center">
+        <div class="container mx-auto flex justify-between items-center">
+            <span class="font-bold">🏛️ HASIL RESMI PEMILOS 2025 - Data simulasi untuk keperluan demonstrasi</span>
+            <button onclick="this.parentElement.parentElement.style.display='none'" class="text-white hover:text-yellow-300">
+                <i class='bx bx-x text-xl'></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="/" class="flex items-center">
+                    <img src="https://iili.io/foFPka2.webp" alt="Logo OSIM MTSN 3 Tulungagung" class="h-10 mr-3">
+                    <span class="text-lg font-bold">Pemilos 2025</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="/" class="hover:text-yellow-300 transition-colors">Beranda</a>
+                <a href="/#candidates" class="hover:text-yellow-300 transition-colors">Pasangan Calon</a>
+                <a href="/hasil" class="text-yellow-300 font-bold">Hasil Pemilihan</a>
+                <a href="/#contact" class="hover:text-yellow-300 transition-colors">Kontak</a>
+            </div>
+            
+            <button class="md:hidden text-white">
+                <i class='bx bx-menu text-2xl'></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Page Header -->
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-800 mb-4">Hasil Pemilihan OSIM 2025</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Simulasi hasil pemilihan ketua dan wakil ketua OSIM MTSN 3 Tulungagung periode 2025-2026
+            </p>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-yellow-500 rounded-full mx-auto mt-4"></div>
+        </div>
+
+        <!-- Winner Announcement -->
+        <div class="glassmorphism rounded-2xl p-8 mb-8 text-center" data-aos="zoom-in">
+            <div class="floating mb-6">
+                <i class='bx bx-trophy text-6xl text-yellow-500'></i>
+            </div>
+            <h2 class="text-3xl font-bold text-blue-800 mb-4">🎉 Selamat kepada Paslon 01!</h2>
+            <p class="text-xl text-gray-700 mb-4">
+                <strong>Ayum Nisaul Hajidah & Moch. Naufal Shidqi</strong>
+            </p>
+            <div class="bg-yellow-100 border border-yellow-300 rounded-lg p-4 max-w-md mx-auto">
+                <p class="text-yellow-800 font-medium">
+                    <i class='bx bx-time mr-2'></i>
+                    Hasil final berdasarkan perhitungan suara sah
+                </p>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="glassmorphism rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-3xl font-bold text-blue-600 mb-2">1.200</div>
+                <p class="text-gray-600">Total Pemilih</p>
+            </div>
+            <div class="glassmorphism rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-3xl font-bold text-green-600 mb-2">1.150</div>
+                <p class="text-gray-600">Suara Sah</p>
+            </div>
+            <div class="glassmorphism rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-3xl font-bold text-red-600 mb-2">50</div>
+                <p class="text-gray-600">Suara Tidak Sah</p>
+            </div>
+            <div class="glassmorphism rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-3xl font-bold text-purple-600 mb-2">95.8%</div>
+                <p class="text-gray-600">Tingkat Partisipasi</p>
+            </div>
+        </div>
+
+        <!-- Main Results Chart -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- Bar Chart -->
+            <div class="glassmorphism rounded-2xl p-6" data-aos="fade-right">
+                <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+                    <i class='bx bx-bar-chart-alt-2 mr-3'></i>
+                    Perolehan Suara per Paslon
+                </h3>
+                <div class="space-y-4">
+                    <!-- Paslon 1 -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-gray-700">Paslon 01 - Ayum & Naufal</span>
+                            <span class="font-bold text-blue-600">480 suara (41.7%)</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="bg-blue-600 h-4 rounded-full progress-bar" style="width: 41.7%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Paslon 3 -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-gray-700">Paslon 03 - Satria & Melisya</span>
+                            <span class="font-bold text-purple-600">380 suara (33.0%)</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="bg-purple-600 h-4 rounded-full progress-bar" style="width: 33.0%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Paslon 2 -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-gray-700">Paslon 02 - Fatimah & Fahri</span>
+                            <span class="font-bold text-green-600">290 suara (25.2%)</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="bg-green-600 h-4 rounded-full progress-bar" style="width: 25.2%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pie Chart Visualization -->
+            <div class="glassmorphism rounded-2xl p-6" data-aos="fade-left">
+                <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+                    <i class='bx bx-pie-chart-alt-2 mr-3'></i>
+                    Diagram Perolehan Suara
+                </h3>
+                <div class="relative h-64 flex items-center justify-center">
+                    <!-- Pie Chart -->
+                    <div class="relative w-48 h-48">
+                        <div class="absolute inset-0 rounded-full border-8 border-blue-600" 
+                             style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);"></div>
+                        <div class="absolute inset-0 rounded-full border-8 border-purple-600" 
+                             style="clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 50%); transform: rotate(150deg);"></div>
+                        <div class="absolute inset-0 rounded-full border-8 border-green-600" 
+                             style="clip-path: polygon(50% 50%, 100% 100%, 0 100%, 50% 50%); transform: rotate(240deg);"></div>
+                        
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                                <span class="text-sm font-bold text-gray-700">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Legend -->
+                    <div class="absolute right-0 top-0 space-y-3">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-4 h-4 bg-blue-600 rounded"></div>
+                            <span class="text-sm text-gray-700">Paslon 01 (41.7%)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-4 h-4 bg-purple-600 rounded"></div>
+                            <span class="text-sm text-gray-700">Paslon 03 (33.0%)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-4 h-4 bg-green-600 rounded"></div>
+                            <span class="text-sm text-gray-700">Paslon 02 (25.2%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Breakdown -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- Voter Demographics -->
+            <div class="glassmorphism rounded-2xl p-6" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+                    <i class='bx bx-group mr-3'></i>
+                    Demografi Pemilih
+                </h3>
+                
+                <div class="space-y-6">
+                    <!-- Students vs Teachers -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-4">Pemilih berdasarkan Status</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Siswa</span>
+                                <span class="font-bold text-blue-600">1,080 (90%)</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-blue-500 h-3 rounded-full progress-bar" style="width: 90%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Guru & Karyawan</span>
+                                <span class="font-bold text-green-600">120 (10%)</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-green-500 h-3 rounded-full progress-bar" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gender Distribution -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-4">Distribusi Gender Pemilih</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 bg-blue-50 rounded-lg">
+                                <i class='bx bx-male text-2xl text-blue-600 mb-2'></i>
+                                <div class="font-bold text-blue-600">55%</div>
+                                <div class="text-sm text-gray-600">Laki-laki</div>
+                            </div>
+                            <div class="text-center p-4 bg-pink-50 rounded-lg">
+                                <i class='bx bx-female text-2xl text-pink-600 mb-2'></i>
+                                <div class="font-bold text-pink-600">45%</div>
+                                <div class="text-sm text-gray-600">Perempuan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voting Patterns -->
+            <div class="glassmorphism rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+                    <i class='bx bx-trending-up mr-3'></i>
+                    Pola Pemilihan
+                </h3>
+                
+                <div class="space-y-6">
+                    <!-- Student Preferences -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3 tooltip" data-tooltip="Preferensi pemilih dari kalangan siswa">
+                            Preferensi Siswa
+                        </h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>Paslon 01</span>
+                                <span class="font-medium">45%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Paslon 03</span>
+                                <span class="font-medium">32%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Paslon 02</span>
+                                <span class="font-medium">23%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Preferences -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3 tooltip" data-tooltip="Preferensi pemilih dari kalangan guru & karyawan">
+                            Preferensi Guru & Karyawan
+                        </h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>Paslon 01</span>
+                                <span class="font-medium">35%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Paslon 03</span>
+                                <span class="font-medium">40%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Paslon 02</span>
+                                <span class="font-medium">25%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voting Time -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Waktu Pemilihan Terpopuler</h4>
+                        <div class="bg-gray-100 rounded-lg p-3">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-gray-600">Pukul 09.00 - 10.00</span>
+                                <span class="text-sm font-bold text-blue-600">42%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 42%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Comparison Chart -->
+        <div class="glassmorphism rounded-2xl p-6 mb-12" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-blue-800 mb-6 text-center">
+                <i class='bx bx-stats mr-3'></i>
+                Perbandingan Detail: Siswa vs Guru/Karyawan
+            </h3>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-blue-50">
+                            <th class="p-3 text-left font-semibold text-blue-800">Paslon</th>
+                            <th class="p-3 text-center font-semibold text-blue-800">Suara dari Siswa</th>
+                            <th class="p-3 text-center font-semibold text-blue-800">Suara dari Guru/Karyawan</th>
+                             <th class="p-3 text-center font-semibold text-blue-800">Total</th>
+                            <th class="p-3 text-center font-semibold text-blue-800">Persentase</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Paslon 1 -->
+                        <tr class="border-b border-gray-200 hover:bg-blue-50 transition-colors">
+                            <td class="p-3 font-medium text-blue-700">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-blue-600 rounded"></div>
+                                    <span>Paslon 01</span>
+                                </div>
+                            </td>
+                            <td class="p-3 text-center">432</td>
+                            <td class="p-3 text-center">48</td>
+                            <td class="p-3 text-center font-bold text-blue-600">480</td>
+                            <td class="p-3 text-center font-bold text-blue-600">41.7%</td>
+                        </tr>
+                        
+                        <!-- Paslon 3 -->
+                        <tr class="border-b border-gray-200 hover:bg-purple-50 transition-colors">
+                            <td class="p-3 font-medium text-purple-700">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-purple-600 rounded"></div>
+                                    <span>Paslon 03</span>
+                                </div>
+                            </td>
+                            <td class="p-3 text-center">346</td>
+                            <td class="p-3 text-center">34</td>
+                            <td class="p-3 text-center font-bold text-purple-600">380</td>
+                            <td class="p-3 text-center font-bold text-purple-600">33.0%</td>
+                        </tr>
+                        
+                        <!-- Paslon 2 -->
+                        <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
+                            <td class="p-3 font-medium text-green-700">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-green-600 rounded"></div>
+                                    <span>Paslon 02</span>
+                                </div>
+                            </td>
+                            <td class="p-3 text-center">248</td>
+                            <td class="p-3 text-center">42</td>
+                            <td class="p-3 text-center font-bold text-green-600">290</td>
+                            <td class="p-3 text-center font-bold text-green-600">25.2%</td>
+                        </tr>
+                        
+                        <!-- Total -->
+                        <tr class="bg-gray-50 font-bold">
+                            <td class="p-3">Total</td>
+                            <td class="p-3 text-center">1,026</td>
+                            <td class="p-3 text-center">124</td>
+                            <td class="p-3 text-center text-blue-800">1,150</td>
+                            <td class="p-3 text-center text-blue-800">100%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Timeline Proses Penghitungan -->
+        <div class="glassmorphism rounded-2xl p-6 mb-12" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-blue-800 mb-6 text-center">
+                <i class='bx bx-time-five mr-3'></i>
+                Timeline Penghitungan Suara
+            </h3>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200"></div>
+                
+                <div class="space-y-8 relative">
+                    <!-- Step 1 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold z-10 flex-shrink-0">
+                            1
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-800 mb-2">Pemungutan Suara</h4>
+                            <p class="text-gray-600 text-sm">10 Des 2025, 09:00 - 14:00 WIB</p>
+                            <p class="text-gray-700 mt-1">1.200 pemilih menggunakan hak suara di aula madrasah</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold z-10 flex-shrink-0">
+                            2
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-800 mb-2">Penghitungan Awal</h4>
+                            <p class="text-gray-600 text-sm">10 Des 2025, 14:30 - 17:00 WIB</p>
+                            <p class="text-gray-700 mt-1">Penghitungan suara per TPS oleh panitia</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold z-10 flex-shrink-0">
+                            3
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-800 mb-2">Rekapitulasi</h4>
+                            <p class="text-gray-600 text-sm">22 Des 2025, 08:00 - 12:00 WIB</p>
+                            <p class="text-gray-700 mt-1">Sidang pleno dan rekapitulasi akhir oleh KPU OSIM</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold z-10 flex-shrink-0">
+                            4
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-800 mb-2">Pengumuman Hasil</h4>
+                            <p class="text-gray-600 text-sm">22 Des 2025, 13:00 WIB</p>
+                            <p class="text-gray-700 mt-1">Pengumuman resmi hasil pemilihan di hadapan seluruh siswa dan guru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact for Complaints -->
+        <div class="glassmorphism rounded-2xl p-8 text-center border-2 border-yellow-300" data-aos="zoom-in">
+            <div class="floating mb-4">
+                <i class='bx bx-message-error text-5xl text-yellow-500'></i>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-800 mb-4">Ada Pengaduan?</h3>
+            <p class="text-gray-700 mb-6 max-w-2xl mx-auto">
+                Jika Anda memiliki pengaduan atau pertanyaan mengenai proses pemilihan, 
+                silakan hubungi panitia pemilihan melalui kontak di bawah ini:
+            </p>
+            
+            <div class="bg-yellow-50 rounded-xl p-6 max-w-md mx-auto border border-yellow-200">
+                <div class="flex items-center justify-center space-x-4 mb-4">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class='bx bxl-whatsapp text-2xl text-green-600'></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-bold text-gray-800">ZAM ZAM</h4>
+                        <p class="text-gray-600 text-sm">Ketua Panitia Pemilihan</p>
+                    </div>
+                </div>
+
+                
+                <a href="https://wa.me/6287848005004" 
+                   class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                   target="_blank">
+                    <i class='bx bxl-whatsapp mr-2 text-xl'></i>
+                    Hubungi via WhatsApp
+                </a>
+                
+                <p class="text-sm text-gray-600 mt-3">
+                    Respon dalam 1x24 jam pada hari kerja
+                </p>
+            </div>
+        </div>
+    </main>
+    
+     <!-- Footer -->
+    <footer class="gradient-bg text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <img src="https://iili.io/foFi2FR.webp" alt="Logo OSIM" class="w-8 h-8 mr-2">
+                        <h3 class="text-lg font-bold">Pemilos 2025</h3>
+                    </div>
+                    <img src="https://iili.io/foFP8y7.webp" alt="Tagline OSIM MTSN 3 Tulungagung" class="h-10">
+                    <p class="text-sm mt-2">MTSN 3 Tulungagung</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <div class="flex justify-center md:justify-end space-x-4 mb-4">
+                        <a href="https://instagram.com/ossnega" class="text-white hover:text-yellow-300">
+                            <i class='bx bxl-instagram text-2xl'></i>
+                        </a>
+                        <a href="https://wa.me/6287848005004" class="text-white hover:text-yellow-300">
+                            <i class='bx bxl-whatsapp text-2xl'></i>
+                        </a>
+                        <a href="mailto:halossnega@gmail.com" class="text-white hover:text-yellow-300">
+                            <i class='bx bx-envelope text-2xl'></i>
+                        </a>
+                    </div>
+                    <p class="text-sm">&copy; 2025 Panitia Pemilihan OSIM MTSN 3 Tulungagung. All rights reserved.</p>
+                    <p class="text-xs mt-1">"Bersatu Maju, Wujudkan Prestasi Gemilang"</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Animate progress bars on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.style.width;
+                        entry.target.style.width = '0%';
+                        setTimeout(() => {
+                            entry.target.style.width = width;
+                        }, 100);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            progressBars.forEach(bar => observer.observe(bar));
+
+            // Add interactive tooltips
+            const tooltips = document.querySelectorAll('.tooltip');
+            tooltips.forEach(tooltip => {
+                tooltip.addEventListener('mouseenter', function() {
+                    this.style.cursor = 'help';
+                });
+            });
+
+            // Add floating animation to trophy
+            const trophy = document.querySelector('.floating');
+            if (trophy) {
+                setInterval(() => {
+                    trophy.style.animation = 'none';
+                    setTimeout(() => {
+                        trophy.style.animation = 'floating 3s ease-in-out infinite';
+                    }, 10);
+                }, 3000);
+            }
+        });
+
+        // Simulate real-time data updates
+        function simulateLiveUpdate() {
+            const elements = document.querySelectorAll('.font-bold.text-blue-600, .font-bold.text-purple-600, .font-bold.text-green-600');
+            elements.forEach(el => {
+                const originalText = el.textContent;
+                setTimeout(() => {
+                    el.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        el.style.transform = 'scale(1)';
+                    }, 300);
+                }, Math.random() * 2000);
+            });
+        }
+
+        // Run simulation every 10 seconds
+        setInterval(simulateLiveUpdate, 10000);
+    </script>
+</body>
+</html>
