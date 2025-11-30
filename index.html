@@ -210,11 +210,6 @@
     <!-- JavaScript Libraries -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- PWA JavaScript -->
-<script src="js/pwa.js"></script>
-<script src="js/offline.js"></script>
-<script src="js/install-promotion.js"></script>
-
 <!-- Load Install Promotion Component -->
 <script>
   fetch('components/install-promotion.html')
@@ -228,10 +223,23 @@
     <!-- Custom JavaScript -->
     <script src="js/script.js"></script>
     <script src="js/countdown.js"></script>
+    <script src="js/cookie-consent.js"></script>
+    <!-- PWA JavaScript -->
+    <script src="js/pwa.js"></script>
+    <script src="js/offline.js"></script>
+    <script src="js/install-promotion.js"></script>
+    
     
     <!-- Load Components -->
     <script>
         // Load components
+        fetch('components/cookie-consent.html')
+           .then(response => response.text())
+           .then(data => {
+            const container = document.createElement('div');
+            container.innerHTML = data;
+            document.body.appendChild(container);
+        
         fetch('components/sidebar.html')
             .then(response => response.text())
             .then(data => document.getElementById('sidebar-container').innerHTML = data);
