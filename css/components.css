@@ -362,3 +362,62 @@
         opacity: 1 !important;
     }
 }
+/* Cookie Consent Styles */
+#cookieConsent {
+    backdrop-filter: blur(20px);
+}
+
+.cookie-slide-in {
+    animation: cookieSlideIn 0.5s ease-out;
+}
+
+@keyframes cookieSlideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Toggle Switch Styles */
+.toggle-checkbox:checked {
+    right: 0;
+    border-color: #10B981;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #10B981;
+}
+
+/* Privacy Policy Link */
+.privacy-link {
+    transition: all 0.3s ease;
+}
+
+.privacy-link:hover {
+    transform: translateY(-1px);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    #cookieConsent {
+        left: 2%;
+        right: 2%;
+        bottom: 2%;
+    }
+    
+    .cookie-content {
+        padding: 1rem;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .glassmorphism {
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+    }
+}
