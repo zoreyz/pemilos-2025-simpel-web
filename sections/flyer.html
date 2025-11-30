@@ -1,30 +1,115 @@
 <!-- Flyer Section -->
 <section class="py-12 bg-white">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-4 high-contrast" data-aos="fade-up">Flayer Resmi Pemilos 2025</h2>
+        <h2 class="text-3xl font-bold text-center mb-4 high-contrast" data-aos="fade-up">Flyer Resmi Pemilos 2025</h2>
         <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
             Bagikan poster resmi ini di media sosial Anda untuk mengajak teman-teman ikut berpartisipasi dalam Pemilihan OSIM 2025.
         </p>
         
         <div class="max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-            <div class="glassmorphism rounded-xl overflow-hidden shadow-lg">
-                <img src="https://iili.io/foFpy5G.png" alt="Flyer Resmi Pemilihan OSIM MTSN 3 Tulungagung 2025" class="w-full">
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-4 text-blue-800">Bagikan Flyer Ini</h3>
-                    <div class="share-buttons">
-                        <a href="#" class="share-btn instagram">
-                            <i class='bx bxl-instagram'></i> Instagram
-                        </a>
-                        <a href="#" class="share-btn whatsapp">
-                            <i class='bx bxl-whatsapp'></i> WhatsApp
-                        </a>
-                        <a href="#" class="share-btn twitter">
-                            <i class='bx bxl-twitter'></i> Twitter
-                        </a>
-                        <a href="#" class="share-btn facebook">
-                            <i class='bx bxl-facebook'></i> Facebook
-                        </a>
+            <div class="glassmorphism rounded-xl overflow-hidden shadow-lg hover-lift">
+                <!-- Flyer Image with Download Button -->
+                <div class="relative overflow-hidden group">
+                    <img 
+                        src="https://pemilos.ossnega.web.id/assets/flayerp.webp" 
+                        alt="Flyer Resmi Pemilihan OSIM MTSN 3 Tulungagung 2025" 
+                        class="w-full transition-transform duration-300 group-hover:scale-105"
+                        id="flyerImage"
+                    >
+                    <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button 
+                            onclick="downloadFlyer()"
+                            class="bg-white/90 hover:bg-white text-blue-600 p-2 rounded-full shadow-lg transition-all duration-300"
+                            title="Download Flyer"
+                        >
+                            <i class='bx bx-download text-xl'></i>
+                        </button>
                     </div>
+                    <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+                        📱 Tap & Hold untuk save gambar
+                    </div>
+                </div>
+                
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-4 text-blue-800 text-center">Bagikan Flyer Ini</h3>
+                    
+                    <!-- Quick Share Buttons -->
+                    <div class="share-buttons mb-6">
+                        <button onclick="shareToWhatsApp()" class="share-btn whatsapp">
+                            <i class='bx bxl-whatsapp'></i> WhatsApp
+                        </button>
+                        <button onclick="shareToInstagram()" class="share-btn instagram">
+                            <i class='bx bxl-instagram'></i> Instagram
+                        </button>
+                        <button onclick="shareToTwitter()" class="share-btn twitter">
+                            <i class='bx bxl-twitter'></i> Twitter
+                        </button>
+                        <button onclick="shareToFacebook()" class="share-btn facebook">
+                            <i class='bx bxl-facebook'></i> Facebook
+                        </button>
+                    </div>
+
+                    <!-- Advanced Share Options -->
+                    <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                        <h4 class="font-semibold text-gray-700 mb-3 text-center">Bagikan sebagai Status/Story</h4>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="shareAsWhatsAppStatus()" class="bg-green-500 hover:bg-green-600 text-white py-2 px-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-center">
+                                <i class='bx bxl-whatsapp mr-2'></i> WhatsApp Status
+                            </button>
+                            <button onclick="shareAsInstagramStory()" class="bg-pink-500 hover:bg-pink-600 text-white py-2 px-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-center">
+                                <i class='bx bxl-instagram mr-2'></i> Instagram Story
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Copy Link Section -->
+                    <div class="border-t pt-4">
+                        <div class="flex items-center space-x-2">
+                            <input 
+                                type="text" 
+                                value="https://pemilos.ossnega.web.id/assets/flayerp.webp" 
+                                id="flyerUrl"
+                                readonly 
+                                class="flex-1 bg-gray-100 border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-600"
+                            >
+                            <button 
+                                onclick="copyFlyerUrl()"
+                                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center"
+                                id="copyButton"
+                            >
+                                <i class='bx bx-copy mr-1'></i> Copy
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2 text-center">
+                            Copy link flyer untuk dibagikan di platform mana pun
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Share Instructions -->
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
+                <div class="bg-blue-50 rounded-lg p-4">
+                    <h4 class="font-semibold text-blue-800 mb-2 flex items-center">
+                        <i class='bx bxl-whatsapp mr-2 text-green-500'></i> Cara Share ke WhatsApp Status
+                    </h4>
+                    <ol class="list-decimal list-inside space-y-1">
+                        <li>Download flyer terlebih dahulu</li>
+                        <li>Buka WhatsApp → Tab Status</li>
+                        <li>Pilih flyer yang sudah didownload</li>
+                        <li>Tambahkan caption dan bagikan</li>
+                    </ol>
+                </div>
+                <div class="bg-pink-50 rounded-lg p-4">
+                    <h4 class="font-semibold text-pink-800 mb-2 flex items-center">
+                        <i class='bx bxl-instagram mr-2 text-pink-500'></i> Cara Share ke Instagram Story
+                    </h4>
+                    <ol class="list-decimal list-inside space-y-1">
+                        <li>Download flyer terlebih dahulu</li>
+                        <li>Buka Instagram → Buat Story</li>
+                        <li>Pilih flyer dari gallery</li>
+                        <li>Edit dan tambahkan mention @ossnega</li>
+                    </ol>
                 </div>
             </div>
         </div>
